@@ -1,0 +1,33 @@
+{
+  "name": "mailmantra/apiclient",
+  "type": "library",
+  "description": "Client Library for Mail Mantra APIs",
+  "keywords": ["Mail Mantra", "SMS", "KYC", "SMTP", "Pay", "mailmantra"],
+  "homepage": "http://https://github.com/mail-mantra/mail-mantra-api-php-client",
+  "minimum-stability": "stable",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Milan Sahana",
+      "email": "milan@mailmantra.in",
+      "homepage": "https://blog.milansahana.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MailMantra\\": "src/"
+    },
+    "files": [
+      "src/aliases.php"
+    ],
+    "classmap": [
+      "src/aliases.php"
+    ]
+  }
+}
