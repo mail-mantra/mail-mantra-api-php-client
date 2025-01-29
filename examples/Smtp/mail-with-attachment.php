@@ -8,8 +8,16 @@ $mmSmtp = new MailMantra\Smtp($api_key);
 
 // ---------------------- Start : View Balance ----------------------------------------------
 
-$balance_arr = $mmSmtp->balance();
-echo json_encode($balance_arr);
+$attachments = [
+    [
+        'content_type' => "text/plain",
+        'file_name' => "test.txt",
+        'base_64_content' => "VGhpcyBpcyB5b3VyIGF0dGFjaGVkIGZpbGUhISEK"
+    ]
+];
+
+$result_arr = $mmSmtp->mail($to, $subject, $body, $attachments);
+echo json_encode($result_arr);
 die;
 
 /*
@@ -17,15 +25,7 @@ Sample Output
 -------------
 {
     "status": 0,
-    "message": "Details Found",
-    "data": {
-        "key": "62a******-****18",
-        "rate": "1.05",
-        "status": "inactive",
-        "balance": "49895.80",
-        "sender_name": "Milan 123",
-        "sender_email": "milan@mailmantra.in",
-    }
+    "message": "Email successfully sent"
 }
 */
 
