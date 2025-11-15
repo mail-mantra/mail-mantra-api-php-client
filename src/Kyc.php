@@ -139,8 +139,8 @@ class Kyc
                 curl_close($ch);
                 $output_arr = json_decode($output, true);
 
-                if(json_last_error_msg() === "No error") {
-                    if((string)$output_arr['status'] === '0') {
+                if(json_last_error_msg() === "No error" && is_array($output_arr)) {
+                    if(isset($output_arr['status']) && (string)$output_arr['status'] === '0') {
                         $result = $output_arr;
                     }
                     elseif(isset($output_arr['status']) && isset($output_arr['message'])) {
@@ -214,8 +214,8 @@ class Kyc
                 curl_close($ch);
                 $output_arr = json_decode($output, true);
 
-                if(json_last_error_msg() === "No error") {
-                    if((string)$output_arr['status'] === '0') {
+                if(json_last_error_msg() === "No error" && is_array($output_arr)) {
+                    if(isset($output_arr['status']) && (string)$output_arr['status'] === '0') {
                         $result = $output_arr;
                     }
                     elseif(isset($output_arr['status']) && isset($output_arr['message'])) {
@@ -290,8 +290,8 @@ class Kyc
                 curl_close($ch);
                 $output_arr = json_decode($output, true);
 
-                if(json_last_error_msg() === "No error") {
-                    if((string)$output_arr['status'] === '0') {
+                if(json_last_error_msg() === "No error" && is_array($output_arr)) {
+                    if(isset($output_arr['status']) && (string)$output_arr['status'] === '0') {
                         $result = $output_arr;
                     }
                     elseif(isset($output_arr['status']) && isset($output_arr['message'])) {

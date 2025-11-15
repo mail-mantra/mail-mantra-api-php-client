@@ -100,9 +100,8 @@ class Sms
                 // {"message":"376466724f44313832333830","type":"success"}
                 // {"message":"Authentication failure","type":"error"}
                 $output_arr = json_decode($output, true);
-
-                if(json_last_error_msg() === "No error") {
-                    if($output_arr['status'] == 'success' || $output_arr['status'] == '1') {
+                if(json_last_error_msg() === "No error" && is_array($output_arr)) {
+                    if(isset($output_arr['status']) && (string)$output_arr['status'] == 'success' || (string)$output_arr['status'] == '1') {
                         $result['status'] = 1;
                         $result['message'] = $output_arr['message'];
                         $result['code'] = $output_arr['code'];
