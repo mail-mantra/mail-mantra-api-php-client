@@ -1,7 +1,7 @@
 
 # Mail Mantra APIs Client Library for PHP #
 
-[![Stable](https://img.shields.io/badge/stable-v1.0.0-blue.svg)](https://packagist.org/packages/mailmantra/apiclient#1.0.0) 
+[![Stable](https://img.shields.io/badge/stable-v0.0.2-blue.svg)](https://packagist.org/packages/mailmantra/apiclient#0.0.2) 
 [![License](https://poser.pugx.org/razorpay/razorpay/license.svg)](https://packagist.org/packages/mailmantra/apiclient)
 
 The Mail Mantra API Client Library enables you to work with Mail Mantra APIs such as SMS, Email, KYC or Pay on your server.
